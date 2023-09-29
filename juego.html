@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+      /*  var edad = prompt("Ingrese la edad")
+
+        if(edad==18){
+            alert("Este usuario es apto para votar")
+        }else if(edad>18){
+            alert("No es la primera votacion")
+        }else{
+            alert("El usuario no cuenta con la edad minima permitida para poder votar")
+        }
+        numero = prompt("Ingrese un numero")
+        
+        numero =parseInt(numero)
+        var resultado = ""
+        resultado = numero >= 10 ? "igual o mayor a diez" : "soy menor de 10"
+        alert(resultado)
+         */  
+        function generarNumeroAleatorio(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }  
+        
+        function eleccion(jugada){
+                let resultado 
+                if(jugada == 1){
+                resultado = " piedra "
+                    }else if(jugada == 2){
+                    resultado = "papel"
+                     }else if(jugada == 3){
+                    resultado= " tijera"
+                    }else{
+                    resultado= "Elegiste mal"
+                    }
+                    return resultado
+            }
+        function combate(){
+            let resultadocombate
+            if(jugador==1 && pc==3){
+                resultadocombate = " Ganaste"
+                }else if(jugador==2 && pc==1){
+                    
+                    resultadocombate = " Ganaste"
+                }else if(jugador==3 && pc==2){
+                    resultadocombate = " Ganaste"  
+                }else if(jugador==pc){
+                    resultadocombate = " Empate"   
+                }else{
+                    resultadocombate = " Perdiste"
+                }
+                alert(resultadocombate) 
+        }
+
+        
+        var jugador = prompt("Selecciona 1.Piedra 2.Papel 3.Tijera")
+        var pc = generarNumeroAleatorio(1, 3); 
+        alert("Elegiste: " + eleccion(jugador))
+        alert("Pc elige: " + eleccion(pc))  
+    
+        combate()
+            
+              
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
